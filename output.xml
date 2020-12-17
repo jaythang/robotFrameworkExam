@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20201218 07:51:40.117" rpa="false">
+<suite id="s1" name="Robottest" source="C:\Users\thang\Documents\robot\robottest.robot">
+<test id="s1-t1" name="Submit form with blank information">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open Browser</arg>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201218 07:51:40.405" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20201218 07:51:40.404" endtime="20201218 07:51:48.156"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELSPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20201218 07:51:48.156" endtime="20201218 07:51:48.157"></status>
+</kw>
+<status status="PASS" starttime="20201218 07:51:40.403" endtime="20201218 07:51:48.157"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201218 07:51:48.157" endtime="20201218 07:51:50.322"></status>
+</kw>
+<kw name="Set Focus To Element" library="Selenium2Library">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="submit"]</arg>
+</arguments>
+<status status="PASS" starttime="20201218 07:51:50.323" endtime="20201218 07:51:50.346"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="submit"]</arg>
+</arguments>
+<msg timestamp="20201218 07:51:50.347" level="INFO">Clicking element '//button[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201218 07:51:50.347" endtime="20201218 07:51:50.415"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>class="modal-dialog modal-lg"</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>class="modal-dialog modal-lg"</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201218 07:51:50.808" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-81.png"&gt;&lt;img src="selenium-screenshot-81.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 07:51:50.439" endtime="20201218 07:51:50.808"></status>
+</kw>
+<msg timestamp="20201218 07:51:50.812" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<status status="FAIL" starttime="20201218 07:51:50.416" endtime="20201218 07:51:50.812"></status>
+</kw>
+<msg timestamp="20201218 07:51:50.812" level="INFO">${present} = False</msg>
+<status status="PASS" starttime="20201218 07:51:50.416" endtime="20201218 07:51:50.813"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}==False</arg>
+<arg>fail</arg>
+<arg>Incomplete Form</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Incomplete Form</arg>
+</arguments>
+<msg timestamp="20201218 07:51:50.814" level="FAIL">Incomplete Form</msg>
+<status status="FAIL" starttime="20201218 07:51:50.814" endtime="20201218 07:51:50.814"></status>
+</kw>
+<status status="FAIL" starttime="20201218 07:51:50.813" endtime="20201218 07:51:50.814"></status>
+</kw>
+<status status="FAIL" starttime="20201218 07:51:40.402" endtime="20201218 07:51:50.815" critical="yes">Incomplete Form</status>
+</test>
+<test id="s1-t2" name="Submit form with no name">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open Browser</arg>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201218 07:51:50.819" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20201218 07:51:50.819" endtime="20201218 07:51:58.701"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELSPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20201218 07:51:58.702" endtime="20201218 07:51:58.703"></status>
+</kw>
+<status status="PASS" starttime="20201218 07:51:50.819" endtime="20201218 07:51:58.703"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201218 07:51:58.705" endtime="20201218 07:52:00.871"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="userEmail"]</arg>
+<arg>email@mail.com</arg>
+</arguments>
+<msg timestamp="20201218 07:52:00.872" level="INFO">Typing text 'email@mail.com' into text field '//input[@id="userEmail"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:00.872" endtime="20201218 07:52:00.994"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="gender-radio-1"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:00.996" level="INFO">Clicking element '//label[@for="gender-radio-1"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:00.995" endtime="20201218 07:52:01.058"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="userNumber"]</arg>
+<arg>3254545655</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.059" level="INFO">Typing text '3254545655' into text field '//input[@id="userNumber"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.059" endtime="20201218 07:52:01.164"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=dateOfBirthInput</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.165" level="INFO">Clicking element 'id=dateOfBirthInput'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.165" endtime="20201218 07:52:01.306"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//select[@class="react-datepicker__month-select"]</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.307" level="INFO">Selecting options from selection list '//select[@class="react-datepicker__month-select"]' by value 5.</msg>
+<status status="PASS" starttime="20201218 07:52:01.307" endtime="20201218 07:52:01.419"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//select[@class="react-datepicker__year-select"]</arg>
+<arg>2008</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.420" level="INFO">Selecting options from selection list '//select[@class="react-datepicker__year-select"]' by value 2008.</msg>
+<status status="PASS" starttime="20201218 07:52:01.420" endtime="20201218 07:52:01.517"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="react-datepicker__day react-datepicker__day--017"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.518" level="INFO">Clicking element '//div[@class="react-datepicker__day react-datepicker__day--017"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.518" endtime="20201218 07:52:01.583"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="hobbies-checkbox-2"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.584" level="INFO">Clicking element '//label[@for="hobbies-checkbox-2"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.584" endtime="20201218 07:52:01.638"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="hobbies-checkbox-1"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.639" level="INFO">Clicking element '//label[@for="hobbies-checkbox-1"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.639" endtime="20201218 07:52:01.697"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="hobbies-checkbox-3"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.698" level="INFO">Clicking element '//label[@for="hobbies-checkbox-3"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.698" endtime="20201218 07:52:01.754"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.754" level="INFO">Clicking element '//div[@class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.754" endtime="20201218 07:52:01.810"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="subjectsInput"]</arg>
+<arg>23423432</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.811" level="INFO">Typing text '23423432' into text field '//input[@id="subjectsInput"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.810" endtime="20201218 07:52:01.931"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>//input[@id="uploadPicture"]</arg>
+<arg>${Device_Path}</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.932" level="INFO">Sending C:\Users\thang\Documents\Morrissey_crop_tie.jpg to browser.</msg>
+<status status="PASS" starttime="20201218 07:52:01.932" endtime="20201218 07:52:01.980"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//textarea[@id="currentAddress"]</arg>
+<arg>blk 8 lot 332 Everywhere</arg>
+</arguments>
+<msg timestamp="20201218 07:52:01.981" level="INFO">Typing text 'blk 8 lot 332 Everywhere' into text field '//textarea[@id="currentAddress"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:01.981" endtime="20201218 07:52:02.091"></status>
+</kw>
+<kw name="Set Focus To Element" library="Selenium2Library">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="submit"]</arg>
+</arguments>
+<status status="PASS" starttime="20201218 07:52:02.092" endtime="20201218 07:52:02.111"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="submit"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:02.112" level="INFO">Clicking element '//button[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:02.112" endtime="20201218 07:52:02.169"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>class="modal-dialog modal-lg"</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>class="modal-dialog modal-lg"</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201218 07:52:02.592" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-82.png"&gt;&lt;img src="selenium-screenshot-82.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 07:52:02.191" endtime="20201218 07:52:02.593"></status>
+</kw>
+<msg timestamp="20201218 07:52:02.593" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<status status="FAIL" starttime="20201218 07:52:02.170" endtime="20201218 07:52:02.594"></status>
+</kw>
+<msg timestamp="20201218 07:52:02.594" level="INFO">${present} = False</msg>
+<status status="PASS" starttime="20201218 07:52:02.169" endtime="20201218 07:52:02.594"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}==False</arg>
+<arg>fail</arg>
+<arg>First Name and Last Name Missing</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>First Name and Last Name Missing</arg>
+</arguments>
+<msg timestamp="20201218 07:52:02.595" level="FAIL">First Name and Last Name Missing</msg>
+<status status="FAIL" starttime="20201218 07:52:02.595" endtime="20201218 07:52:02.596"></status>
+</kw>
+<status status="FAIL" starttime="20201218 07:52:02.595" endtime="20201218 07:52:02.596"></status>
+</kw>
+<status status="FAIL" starttime="20201218 07:51:50.818" endtime="20201218 07:52:02.596" critical="yes">First Name and Last Name Missing</status>
+</test>
+<test id="s1-t3" name="Submit form with invalid email">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open Browser</arg>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201218 07:52:02.601" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20201218 07:52:02.601" endtime="20201218 07:52:10.573"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELSPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20201218 07:52:10.573" endtime="20201218 07:52:10.573"></status>
+</kw>
+<status status="PASS" starttime="20201218 07:52:02.601" endtime="20201218 07:52:10.573"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201218 07:52:10.575" endtime="20201218 07:52:12.738"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="firstName"]</arg>
+<arg>rewrwr</arg>
+</arguments>
+<msg timestamp="20201218 07:52:12.739" level="INFO">Typing text 'rewrwr' into text field '//input[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:12.738" endtime="20201218 07:52:12.849"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="lastName"]</arg>
+<arg>werew</arg>
+</arguments>
+<msg timestamp="20201218 07:52:12.850" level="INFO">Typing text 'werew' into text field '//input[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:12.850" endtime="20201218 07:52:12.943"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="userEmail"]</arg>
+<arg>123435</arg>
+</arguments>
+<msg timestamp="20201218 07:52:12.944" level="INFO">Typing text '123435' into text field '//input[@id="userEmail"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:12.944" endtime="20201218 07:52:13.038"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="gender-radio-1"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.039" level="INFO">Clicking element '//label[@for="gender-radio-1"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.039" endtime="20201218 07:52:13.099"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="userNumber"]</arg>
+<arg>3254545655</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.100" level="INFO">Typing text '3254545655' into text field '//input[@id="userNumber"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.099" endtime="20201218 07:52:13.208"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=dateOfBirthInput</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.209" level="INFO">Clicking element 'id=dateOfBirthInput'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.208" endtime="20201218 07:52:13.352"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//select[@class="react-datepicker__month-select"]</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.353" level="INFO">Selecting options from selection list '//select[@class="react-datepicker__month-select"]' by value 5.</msg>
+<status status="PASS" starttime="20201218 07:52:13.353" endtime="20201218 07:52:13.466"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//select[@class="react-datepicker__year-select"]</arg>
+<arg>2008</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.467" level="INFO">Selecting options from selection list '//select[@class="react-datepicker__year-select"]' by value 2008.</msg>
+<status status="PASS" starttime="20201218 07:52:13.467" endtime="20201218 07:52:13.563"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="react-datepicker__day react-datepicker__day--017"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.563" level="INFO">Clicking element '//div[@class="react-datepicker__day react-datepicker__day--017"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.563" endtime="20201218 07:52:13.627"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="hobbies-checkbox-2"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.627" level="INFO">Clicking element '//label[@for="hobbies-checkbox-2"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.627" endtime="20201218 07:52:13.679"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="hobbies-checkbox-1"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.680" level="INFO">Clicking element '//label[@for="hobbies-checkbox-1"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.680" endtime="20201218 07:52:13.736"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label[@for="hobbies-checkbox-3"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.737" level="INFO">Clicking element '//label[@for="hobbies-checkbox-3"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.737" endtime="20201218 07:52:13.794"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.795" level="INFO">Clicking element '//div[@class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.795" endtime="20201218 07:52:13.853"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id="subjectsInput"]</arg>
+<arg>23423432</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.854" level="INFO">Typing text '23423432' into text field '//input[@id="subjectsInput"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:13.854" endtime="20201218 07:52:13.984"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>//input[@id="uploadPicture"]</arg>
+<arg>${Device_Path}</arg>
+</arguments>
+<msg timestamp="20201218 07:52:13.985" level="INFO">Sending C:\Users\thang\Documents\Morrissey_crop_tie.jpg to browser.</msg>
+<status status="PASS" starttime="20201218 07:52:13.984" endtime="20201218 07:52:14.036"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//textarea[@id="currentAddress"]</arg>
+<arg>blk 8 lot 332 Everywhere</arg>
+</arguments>
+<msg timestamp="20201218 07:52:14.037" level="INFO">Typing text 'blk 8 lot 332 Everywhere' into text field '//textarea[@id="currentAddress"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:14.037" endtime="20201218 07:52:14.152"></status>
+</kw>
+<kw name="Set Focus To Element" library="Selenium2Library">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="submit"]</arg>
+</arguments>
+<status status="PASS" starttime="20201218 07:52:14.153" endtime="20201218 07:52:14.172"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="submit"]</arg>
+</arguments>
+<msg timestamp="20201218 07:52:14.172" level="INFO">Clicking element '//button[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201218 07:52:14.172" endtime="20201218 07:52:14.239"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>class="modal-dialog modal-lg"</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>class="modal-dialog modal-lg"</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201218 07:52:14.654" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-83.png"&gt;&lt;img src="selenium-screenshot-83.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 07:52:14.279" endtime="20201218 07:52:14.654"></status>
+</kw>
+<msg timestamp="20201218 07:52:14.655" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+</msg>
+<status status="FAIL" starttime="20201218 07:52:14.241" endtime="20201218 07:52:14.655"></status>
+</kw>
+<msg timestamp="20201218 07:52:14.655" level="INFO">${present} = False</msg>
+<status status="PASS" starttime="20201218 07:52:14.240" endtime="20201218 07:52:14.655"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}==False</arg>
+<arg>fail</arg>
+<arg>Invalid Email</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Invalid Email</arg>
+</arguments>
+<msg timestamp="20201218 07:52:14.656" level="FAIL">Invalid Email</msg>
+<status status="FAIL" starttime="20201218 07:52:14.656" endtime="20201218 07:52:14.656"></status>
+</kw>
+<status status="FAIL" starttime="20201218 07:52:14.656" endtime="20201218 07:52:14.656"></status>
+</kw>
+<status status="FAIL" starttime="20201218 07:52:02.600" endtime="20201218 07:52:14.657" critical="yes">Invalid Email</status>
+</test>
+<status status="FAIL" starttime="20201218 07:51:40.119" endtime="20201218 07:52:14.660"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" id="s1" name="Robottest">Robottest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
