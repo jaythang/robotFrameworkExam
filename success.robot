@@ -10,7 +10,7 @@ ${SLEEP}          3
 ${Device_Path}      C:\\Users\\thang\\Documents\\Morrissey_crop_tie.jpg
 
 *** Test Cases ***
-ToolsQA test
+Submitting Correct Data information
     Open Browser    https://demoqa.com/automation-practice-form    ${BROWSER}
     Maximize Browser Window
     Input Text    //input[@id="firstName"]    rewrwr
