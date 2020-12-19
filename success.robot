@@ -33,7 +33,17 @@ Submitting Correct Data information
     #Execute Javascript window.scrollTo(1078, 691);
     Set Focus To Element    //button[@id="submit"]
     Click Element    //button[@id="submit"]
-    Click Element    //button[@id="closeLargeModal"]
+
+
+    ${present}=      Run Keyword And Return Status    Click Element    //button[@id="closeLargeModal"]
+
+
+
+    Run keyword if     ${present}==False      fail         First Name and Last Name Missing
+
+
+    Close BROWSER
+
 
 
 

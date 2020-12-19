@@ -18,14 +18,8 @@ Submit form with blank information
     #Execute Javascript window.scrollTo(1078, 691);
     Set Focus To Element    //button[@id="submit"]
     Click Element   //button[@id="submit"]
-
-
-    ${present}=      Run Keyword And Return Status    Element Should Be Visible     class="modal-dialog modal-lg"
-
-
-    Run keyword if     ${present}==False      fail         Incomplete Form
-
-
+    ${present}=      Run Keyword And Return Status    Click Element    //button[@id="closeLargeModal"]
+    Run keyword if     ${present}==False      fail      Incomplete Form    
     Close BROWSER
 
 Submit form with no name
@@ -53,10 +47,8 @@ Submit form with no name
     Click Element   //button[@id="submit"]
 
 
-    ${present}=      Run Keyword And Return Status    Element Should Be Visible     class="modal-dialog modal-lg"
-
-
-    Run keyword if     ${present}==False      fail         First Name and Last Name Missing
+    ${present}=      Run Keyword And Return Status    Click Element    //button[@id="closeLargeModal"]
+    Run keyword if     ${present}==False      fail          First Name and Last Name Missing
 
 
     Close BROWSER
@@ -88,10 +80,8 @@ Submit form with invalid email
         Click Element   //button[@id="submit"]
 
 
-        ${present}=      Run Keyword And Return Status    Element Should Be Visible     class="modal-dialog modal-lg"
-
-
-        Run keyword if     ${present}==False      fail         Invalid Email
+        ${present}=      Run Keyword And Return Status    Click Element    //button[@id="closeLargeModal"]
+        Run keyword if     ${present}==False      fail          Invalid Email
 
 
         Close BROWSER
